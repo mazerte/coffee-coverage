@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
+require('coffee-script');
 var path = require('path');
 var fs   = require('fs');
-var lib  = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
+var lib  = path.join(path.dirname(fs.realpathSync(__filename)), '../src');
 
 require(lib + '/command').main(process.argv);

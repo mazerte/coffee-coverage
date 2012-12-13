@@ -20,7 +20,8 @@
   },
   "dependencies": {
     "pkginfo":         ">=0.2.3",
-    "argparse":        ">=0.1.7"
+    "argparse":        ">=0.1.7",
+    "coffee-script":   ">=1.4.0"
   },
   "engines": {
     "node":            ">=0.6.19"
