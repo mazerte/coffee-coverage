@@ -217,7 +217,11 @@ class exports.CoverageInstrumentor extends events.EventEmitter
         validateSrcDest sourceFile, outFile
 
         switch options.path
-            when 'relative' then filename = stripLeadingDot sourceFile
+            when 'relative' 
+                if options.srcBasePath
+                    filename = stripLeadingDot( options.srcBasePath + sourceFile )
+                else
+                    filename = stripLeadingDot sourceFile
             when 'abbr' then filename = abbreviatedPath stripLeadingDot sourceFile
             else filename = path.basename sourceFile
 
